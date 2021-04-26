@@ -1,3 +1,60 @@
 ul {
     list-style-type: none;
 }
+
+.weather-app-wrapper{
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.weather-app{
+    border:1px solid;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+ul.weather-stats{
+    color: #70757a;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 9px;
+    padding-top: 6px;
+    display:inline-block;
+}
+
+.temperature{
+    display: inline;
+    line-height: 60px;
+    vertical-align: top;
+    font-size: 48px;
+}
+
+.units{
+    display: inline-block;
+    line-height: 24px;
+    padding-left: 6px;
+    vertical-align: top;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.emoji{
+    display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    margin-top: unset;
+    width: 60px;
+}
+
+.city{
+    font-size: 16pt;
+}
+
+.day-time, .current-weather-descrip  {
+    font-size:10pt;
+    color: #70757a;
+}
+
+.open-source-link{
+    font-size:10pt;
+}
