@@ -7,6 +7,7 @@
     <title>Weather ☀️</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,22 +16,19 @@
                 <div class="row">
                     <div class="col-6 justify-content-start">
                         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="partly cloudy" class="src emoji">
-                        <div class="temperature">42</div><span class="units">°F | °C</span>
+                        <div class="temperature" id="temperature">42</div><span class="units">°F | °C</span>
                             <ul class = "weather-stats">
                                 <li>
-                                    Percipitation: 0%
+                                    Humidity: <span id = "humidity">60</span>%
                                 </li>
                                 <li>
-                                    Humidity: 60%
-                                </li>
-                                <li>
-                                    Wind: 12mph
+                                    Wind: <span id = "wind-speed">12</span>mph
                                 </li>
                             </ul>
                         </div>
                     <div class="col-6 text-right">
                         <ul>
-                            <li class = "city">
+                            <li class = "city" id = "city">
                                 Evanston, IL
                             </li>
                             <li class = "day-time">
