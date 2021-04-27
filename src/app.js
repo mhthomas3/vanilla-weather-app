@@ -27,8 +27,20 @@ function displayTemperature(response){
 
 }
 
-let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
+function search(city){
+    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayTemperature); 
+}
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input")
+    search(cityInputElement.value)
+}
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York")
