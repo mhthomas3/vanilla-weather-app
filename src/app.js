@@ -5,6 +5,8 @@ function formatDate(timestamp){
     let hours = date.getHours();
     if (hours < 10) {
         hours = `0${hours}`
+    } else if (hours > 12) {
+        hours = `${hours%12}`
     }
     let minutes = date.getMinutes();
     if (minutes < 10) {
@@ -21,10 +23,11 @@ function displayTemperature(response){
     document.querySelector(".current-weather-descrip").innerHTML = response.data.weather[0].description;
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
-    document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000)
-    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-    document.querySelector("#icon").setAttribute("alt", `${response.data.weather[0].description}`)
-
+    document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
+    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#icon").setAttribute("alt", `${response.data.weather[0].description}`);
+    fahrenheitTemperature = response.data.main.temp;
+    console.log(fahrenheitTemperature)
 }
 
 function search(city){
@@ -39,8 +42,26 @@ function handleSubmit(event){
     search(cityInputElement.value)
 }
 
+function displayCelsiusTemp(event){
+    event.preventDefault();
+    let celsiusTemperature = ((fahrenheitTemperature-32)*(5/9))
+    temperature.innerHTML = Math.round(celsiusTemperature)
+}
+
+function displayfahrenheitTemp(event){
+    temperature.innerHTML = Math.round(fahrenheitTemperature)
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
+
+let fahrenheitTemperature = null;
 
 search("New York")
