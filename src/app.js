@@ -44,12 +44,17 @@ function handleSubmit(event){
 
 function displayCelsiusTemp(event){
     event.preventDefault();
-    let celsiusTemperature = ((fahrenheitTemperature-32)*(5/9))
-    temperature.innerHTML = Math.round(celsiusTemperature)
+    let celsiusTemperature = ((fahrenheitTemperature-32)*(5/9));
+    temperature.innerHTML = Math.round(celsiusTemperature);
+    fahrenheitLink.classList.remove("active");
+    celsiusLink.classList.add("active");
 }
 
 function displayfahrenheitTemp(event){
-    temperature.innerHTML = Math.round(fahrenheitTemperature)
+    event.preventDefault();
+    temperature.innerHTML = Math.round(fahrenheitTemperature);
+    fahrenheitLink.classList.add("active");
+    celsiusLink.classList.remove("active");
 }
 
 let form = document.querySelector("#search-form");

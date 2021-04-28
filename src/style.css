@@ -65,3 +65,13 @@ ul.weather-stats{
 .open-source-link{
     font-size:10pt;
 }
+
+.units .active{
+    color: rgb(33,33,33);
+    cursor: default;
+}
+
+.units .active:hover{
+    text-decoration: none;
+    color: rgb(33,33,33);
+}
