@@ -1,5 +1,4 @@
 function formatDate(timestamp){
-    //calculate the date
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     let date = new Date(timestamp);
     let hours = date.getHours();
@@ -18,6 +17,8 @@ function formatDate(timestamp){
 }
 
 function displayTemperature(response){
+    fahrenheitLink.classList.add("active");
+    celsiusLink.classList.remove("active");
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector(".current-weather-descrip").innerHTML = response.data.weather[0].description;
@@ -30,37 +31,66 @@ function displayTemperature(response){
     console.log(fahrenheitTemperature)
 }
 
+
+//function exists to call default city search, basically
 function search(city){
     let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayTemperature); 
 }
 
-function handleSubmit(event){
+//function to create API call when submitted via city search form
+function createApiUrlFromForm(event){
     event.preventDefault();
-    let cityInputElement = document.querySelector("#city-input")
-    search(cityInputElement.value)
-}
+    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let units = "imperial";
+    let city = document.querySelector("#city-input").value;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+  };
 
+//function to create API call when current location button is clicked
+function createApiUrlFromPosition(position) {
+    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let units = "imperial";
+    let lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+  };
+
+//Unit conversion functions
 function displayCelsiusTemp(event){
     event.preventDefault();
     let celsiusTemperature = ((fahrenheitTemperature-32)*(5/9));
     temperature.innerHTML = Math.round(celsiusTemperature);
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
-}
+};
 
 function displayfahrenheitTemp(event){
     event.preventDefault();
     temperature.innerHTML = Math.round(fahrenheitTemperature);
     fahrenheitLink.classList.add("active");
     celsiusLink.classList.remove("active");
-}
+};
 
+//function to get user's current position and call API key creation function when current position button is clicked
+function getCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(createApiUrlFromPosition);
+  };
+
+//submiting location from form event listener and function call
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
+let searchButton = document.querySelector(".search-button");
+form.addEventListener("submit", createApiUrlFromForm);
+searchButton.addEventListener("click", createApiUrlFromForm);
 
+//submiting location using current location button event listener and function call
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentPosition);
 
+//unit conversion event listeners and function calls
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
@@ -69,4 +99,6 @@ fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
 
 let fahrenheitTemperature = null;
 
+
+//default function call
 search("New York")

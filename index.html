@@ -15,17 +15,16 @@
             <div class="weather-app">
                 <form id="search-form" class = "mb-3">
                     <div class="row">
-                        <div class="col-9">
-                            <input type="text" placeholder="Type a city name" class = "form-control" id = "city-input">
-                        </div>
-                        <div class="col-2">
-                            <input type="submit" value = "Search" class = "btn btn-primary">
+                        <div class="input-group my-3 mx-3">
+                            <input type="text" placeholder="Type a city name" class = "form-control" id = "city-input" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary mx-1 search-button" type="button" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary" type="button" id="current-location-button">📍</button>
                         </div>
                     </div>
                 </form>
                 <div class="row">
-                    <div class="col-6 justify-content-start">
-                        <img src="" alt="partly cloudy" class="src emoji" id = "icon">
+                    <div class="col-7 justify-content-start">
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="partly cloudy" class="src emoji" id = "icon">
                         <div class="temperature" id="temperature">42</div><span class="units"> <a href="#" id = "fahrenheit-link" class = "active">°F</a> | <a href="#" id = "celsius-link"> °C</a></span>
                             <ul class = "weather-stats">
                                 <li>
@@ -36,7 +35,7 @@
                                 </li>
                             </ul>
                         </div>
-                    <div class="col-6 text-right">
+                    <div class="col-5 text-right">
                         <ul>
                             <li class = "city" id = "city">
                                 Evanston, IL
