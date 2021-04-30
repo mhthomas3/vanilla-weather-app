@@ -3,7 +3,7 @@ ul {
 }
 
 .weather-app-wrapper{
-    max-width: 00px;
+    max-width: 500px;
     margin: 30px auto;
 }
 
@@ -53,6 +53,7 @@ ul.weather-stats{
 .day-time, .current-weather-descrip  {
     font-size:10pt;
     color: #70757a;
+
 }
 
 .current-weather-descrip::first-letter{
