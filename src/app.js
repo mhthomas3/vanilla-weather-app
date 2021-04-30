@@ -51,6 +51,8 @@ function createApiUrlFromForm(event){
 
 //function to create API call when current location button is clicked
 function createApiUrlFromPosition(position) {
+    //clearing out last entered city from search box
+    document.querySelector("#city-input").value = "";
     let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
     let units = "imperial";
     let lon = position.coords.longitude;
