@@ -16,6 +16,28 @@ function formatDate(timestamp){
 
 }
 
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class = "row">`;
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+   
+    days.forEach(function(day){
+    
+    forecastHTML = forecastHTML + `
+        <div class="col-2"> 
+            <div class="forecast-day">${day}</div>
+            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" width="36">
+            <span class="forecast-temp-max">70°</span> <span class="forecast-temp-min">50°</span>
+        </div>`
+    ;
+    });
+
+
+    forecastHTML = forecastHTML + "</div>";
+    forecastElement.innerHTML = forecastHTML
+}
+
 function displayTemperature(response){
     fahrenheitLink.classList.add("active");
     celsiusLink.classList.remove("active");
@@ -102,4 +124,6 @@ let fahrenheitTemperature = null;
 
 
 //default function call
-search("New York")
+search("New York");
+displayForecast();
+
