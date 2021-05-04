@@ -28,14 +28,13 @@ function displayForecast(response){
     let forecastElement = document.querySelector("#forecast");
 
     let forecastHTML = `<div class = "row">`;
-    
+
     forecast.forEach(function(forecastDay, index){
     if (index<6){
-    
     forecastHTML = forecastHTML + `
         <div class="col-2"> 
             <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
-            <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="36">
+            <img src= "src/Icon SVGs/${forecastDay.weather[0].icon}.svg" alt="" width="36">
             </br>
             <span class="forecast-temp-max">${Math.round(forecastDay.temp.max)}</span> <span class="forecast-temp-min">${Math.round(forecastDay.temp.min)}</span>
         </div>`
@@ -62,8 +61,9 @@ function displayTemperature(response){
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
     document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
-    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     document.querySelector("#icon").setAttribute("alt", `${response.data.weather[0].description}`);
+    let svgName =response.data.weather[0].icon
+    document.querySelector("#icon").setAttribute("src", `src/Icon SVGs/${svgName}.svg`)
     fahrenheitTemperature = response.data.main.temp;
 
     getForecast(response.data.coord);

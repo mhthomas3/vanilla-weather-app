@@ -41,9 +41,9 @@ ul.weather-stats{
 .emoji{
     display: inline-block;
     vertical-align: top;
-    height: 60px;
+    width:100px;
     margin-top: unset;
-    width: 60px;
+    
 }
 
 .city{
@@ -90,4 +90,117 @@ ul.weather-stats{
 .forecast-temp-min{
     font-size:10px;
     opacity: 0.6;
+}
+
+@keyframes bounce-up{
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes bounce-down{
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes fade-in-move-down-1 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes fade-in-move-down-2 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes fade-in-move-down-3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes ligthning1-flash {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+#dark_cloud.st0{
+    fill:#C1CCDB;
+    animation: bounce-up 2s infinite;
+    animation-timing-function: ease;
+    }
+
+
+#light_cloud{fill:#E3ECFF;
+    animation: bounce-down 2s infinite;
+    animation-timing-function: ease;
+    }
+
+
+#sun {
+    fill:#FBB03B;
+}
+
+#rays{
+    animation: rotation 10s infinite linear;
+    position:fixed;
+    transform-origin:center;
+    transform-box:fill-box;
+    fill:#FBB03B;
+}
+
+#raindrop-1{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-1 1.7s linear infinite;
+    animation-delay:.2s;
+    opacity: 0;
+}
+
+#raindrop-2{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-2 1.2s linear infinite;
+}
+
+#raindrop-3{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-3 1.5s linear infinite;
+    animation-delay:.7s;
+    opacity: 0;
+}
+
+#lightningbolt1{
+    animation: ligthning1-flash .8s infinite;
+    fill:#FBB03B;
 }
