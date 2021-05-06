@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E3ECFF;}
+	.st1{fill:#C1CCDB;}
+	.st2{fill:#FBB03B;}
+
+		@keyframes bounce-up{
+		0%   { transform: translateY(0px); }
+		50%  { transform: translateY(10px); }
+		100% { transform: translateY(0px); }
+	}
+
+	@keyframes bounce-down{
+		0%   { transform: translateY(0px); }
+		50%  { transform: translateY(-10px); }
+		100% { transform: translateY(0px); }
+	}
+
+  	@keyframes ligthning1-flash {
+		0% {
+		opacity: 0;
+		}
+		100% {
+		opacity: 1;
+		}
+	}
+
+	#lightningbolt1{
+		animation: ligthning1-flash .8s infinite;
+		fill:#FBB03B;
+	}
+
+	#dark_cloud.st0{
+		animation: bounce-up 2s infinite;
+		animation-timing-function: ease;
+    }
+
+
+	#light_cloud{
+		animation: bounce-down 2s infinite;
+		animation-timing-function: ease;
+    }
+</style>
+<path id="dark_cloud" class="st0" d="M238.7,91.9C234.2,59,206,33.7,171.9,33.7c-27.7,0-51.4,16.7-61.8,40.5c-2.4-0.4-5-0.6-7.5-0.6
+	c-26.2,0-47.5,21.3-47.5,47.5c0,25.5,20.1,46.3,45.3,47.4l0,0h0.1c0.7,0,1.4,0.1,2,0.1c0.7,0,1.4,0,2-0.1h65.3c0.7,0,1.4,0.1,2,0.1
+	s1.4,0,2-0.1h54c0.3,0,0.7,0.1,1,0.1c21.5,0,39-17.4,39-39C268,111.4,255.5,96.2,238.7,91.9z"/>
+<path id="light_cloud" class="st1" d="M215.6,117.1C211.1,84.3,182.9,59,148.9,59C121.2,59,97.4,75.6,87,99.5
+	c-2.4-0.4-5-0.6-7.5-0.6c-26.2,0-47.5,21.3-47.5,47.5c0,25.5,20.1,46.3,45.3,47.4l0,0h0.1c0.7,0,1.4,0.1,2,0.1c0.7,0,1.4,0,2-0.1
+	h65.3c0.7,0,1.4,0.1,2,0.1s1.4,0,2-0.1h54c0.3,0,0.7,0.1,1,0.1c21.5,0,39-17.4,39-39C244.9,136.7,232.5,121.5,215.6,117.1z"/>
+<path id="lightningbolt1" class="st2" d="M161.5,171.1l-25.9-9.5c-9.1,18.4-18.1,36.9-27.2,55.3c2.4,0.9,4.9,1.7,7.3,2.6
+	c-7.1,15-14.3,30-21.4,45c17.3-20.4,34.7-40.7,52-61.1c-2.8-1-5.5-2-8.3-2.9C145.9,190.7,153.7,180.9,161.5,171.1z"/>
+</svg>

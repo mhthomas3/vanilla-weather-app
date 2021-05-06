@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	@keyframes fade-in-move-down-1 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes fade-in-move-down-2 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes fade-in-move-down-3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes ligthning1-flash {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-down{
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#dark_cloud{fill:#E3ECFF;
+    animation: bounce-down 2s infinite;
+    animation-timing-function: ease;
+    }
+
+#raindrop-1{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-1 1.7s linear infinite;
+    animation-delay:.2s;
+    opacity: 0;
+}
+
+#raindrop-2{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-2 1.2s linear infinite;
+}
+
+#raindrop-3{
+    fill:#7FCDEE;stroke:#7FCDEE;stroke-miterlimit:10;
+    animation: fade-in-move-down-3 1.5s linear infinite;
+    animation-delay:.7s;
+    opacity: 0;
+}
+</style>
+<path id="dark_cloud" class="st0" d="M227.2,95.9c-4.5-32.9-32.7-58.2-66.8-58.2c-27.7,0-51.4,16.7-61.8,40.5
+	c-2.4-0.4-5-0.6-7.5-0.6c-26.2,0-47.5,21.3-47.5,47.5c0,25.5,20.1,46.3,45.3,47.4l0,0H89c0.7,0,1.4,0.1,2,0.1c0.7,0,1.4,0,2-0.1
+	h65.3c0.7,0,1.4,0.1,2,0.1c0.7,0,1.4,0,2-0.1h54c0.3,0,0.7,0.1,1,0.1c21.5,0,39-17.4,39-39C256.5,115.5,244.1,100.3,227.2,95.9z"/>
+<path id="raindrop-1" class="st1" d="M114.3,197L104,177.6l-5.3,10.1l-4.9,9.3c-1.1,1.7-1.7,3.7-1.7,5.8c0,6.3,5.4,11.3,12,11.3
+	s12-5.1,12-11.3C116,200.7,115.4,198.7,114.3,197z"/>
+<path id="raindrop-2" class="st2" d="M163.1,197l-10.3-19.4l-5.3,10.1l-4.9,9.3c-1.1,1.7-1.7,3.7-1.7,5.8c0,6.3,5.4,11.3,12,11.3
+	s12-5.1,12-11.3C164.9,200.7,164.2,198.7,163.1,197z"/>
+<path id="raindrop-3" class="st1" d="M212.8,197l-10.3-19.4l-5.3,10.1l-4.9,9.3c-1.1,1.7-1.7,3.7-1.7,5.8c0,6.3,5.4,11.3,12,11.3
+	s12-5.1,12-11.3C214.6,200.7,213.9,198.7,212.8,197z"/>
+</svg>
