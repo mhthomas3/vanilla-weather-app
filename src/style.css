@@ -3,23 +3,22 @@ ul {
 }
 
 .weather-app-wrapper{
-    max-width: 600px;
+    max-width: 500px;
     margin:0 auto;
 }
 
 .weather-app-background{
     margin: 30px auto;
-    border:1px solid;
-    padding: 65px;
-    border-radius: 8px;
+    padding: 65px 10px;
     opacity: .8;
 }
 
 .weather-app{
-    border:1px solid;
     padding: 15px;
+    border: 1px solid;
     border-radius: 8px;
-    background-color: rgb(255,255,255, .7)
+    background-color: rgb(255,255,255, .7);
+    max-width: 500px;
 }
 
 ul.weather-stats{
@@ -99,4 +98,8 @@ ul.weather-stats{
 .forecast-temp-min{
     font-size:10px;
     opacity: 0.6;
+}
+
+#monstera_plant{
+    margin:-300px 0 0 300px;
 }
