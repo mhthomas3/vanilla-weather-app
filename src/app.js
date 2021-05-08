@@ -53,6 +53,7 @@ function getForecast(coordinates){
 }
 
 function displayTemperature(response){
+    console.log(response)
     fahrenheitLink.classList.add("active");
     celsiusLink.classList.remove("active");
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
@@ -65,7 +66,13 @@ function displayTemperature(response){
     let svgName =response.data.weather[0].icon
     document.querySelector("#icon").setAttribute("src", `src/Icon SVGs/${svgName}.svg`)
     fahrenheitTemperature = response.data.main.temp;
-
+    let dayOrNight = svgName.charAt(2);
+    let weatherAppWrapper = document.querySelector("#weather-app-wrapper");
+    if (dayOrNight === "n") {
+        weatherAppWrapper.setAttribute("class", "weather-app-wrapper-night")
+    } else if (dayOrNight === "d") { 
+        weatherAppWrapper.setAttribute("class", "weather-app-wrapper-day")
+    }
     getForecast(response.data.coord);
 }
 

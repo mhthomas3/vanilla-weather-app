@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1588" style="enable-background:new 0 0 1920 1588;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#666699;}
+	.st1{opacity:0.39;fill:url(#light_x5F_shaft_1_);stroke:url(#light_x5F_shaft_2_);stroke-miterlimit:10;}
+</style>
+<g id="wall_x5F_color">
+	<rect x="0.5" y="0.5" class="st0" width="1919" height="1587"/>
+	<path class="st0" d="M1919,1v1586H1V1H1919 M1920,0H0v1588h1920V0L1920,0z"/>
+</g>
+<linearGradient id="light_x5F_shaft_1_" gradientUnits="userSpaceOnUse" x1="-110.7895" y1="624.75" x2="1809.7106" y2="624.75">
+	<stop  offset="4.169716e-02" style="stop-color:#666699"/>
+	<stop  offset="0.1832" style="stop-color:#8080A3;stop-opacity:0.9555"/>
+	<stop  offset="0.5718" style="stop-color:#C4C2BD;stop-opacity:0.8335"/>
+	<stop  offset="0.8533" style="stop-color:#EFECCE;stop-opacity:0.7451"/>
+	<stop  offset="0.9968" style="stop-color:#FFFCD4;stop-opacity:0.7"/>
+</linearGradient>
+<linearGradient id="light_x5F_shaft_2_" gradientUnits="userSpaceOnUse" x1="-1.0111" y1="624.8178" x2="1920.5009" y2="624.8178">
+	<stop  offset="2.664596e-02" style="stop-color:#666699"/>
+	<stop  offset="0.2328" style="stop-color:#69699A;stop-opacity:0.9788"/>
+	<stop  offset="0.3917" style="stop-color:#73719C;stop-opacity:0.9625"/>
+	<stop  offset="0.5347" style="stop-color:#837FA0;stop-opacity:0.9478"/>
+	<stop  offset="0.6685" style="stop-color:#9A93A5;stop-opacity:0.9341"/>
+	<stop  offset="0.7958" style="stop-color:#B8ADAC;stop-opacity:0.921"/>
+	<stop  offset="0.9166" style="stop-color:#DDCBB4;stop-opacity:0.9086"/>
+	<stop  offset="1" style="stop-color:#FAE5BB;stop-opacity:0.9"/>
+</linearGradient>
+<path id="light_x5F_shaft" class="st1" d="M1920,0C1280.5,168.5,641,337,1.5,505.5c1.6,189.3,1.6,378.7,0,568
+	c-0.5,58.7-1.2,117.3-2,176c640-293.7,1280-587.3,1920-881C1919.7,245.7,1919.8,122.8,1920,0z"/>
+</svg>
