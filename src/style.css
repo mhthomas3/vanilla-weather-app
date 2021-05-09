@@ -112,7 +112,7 @@ ul.weather-stats{
 .open-source-link{
     font-size:10pt;
     display:block;
-    margin:0 auto;
+    text-align: center;
 }
 
 .units .active{
