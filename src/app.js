@@ -68,10 +68,13 @@ function displayTemperature(response){
     fahrenheitTemperature = response.data.main.temp;
     let dayOrNight = svgName.charAt(2);
     let weatherAppWrapper = document.querySelector("#weather-app-wrapper");
+    let weatherApp = document.querySelector("#weather-app")
     if (dayOrNight === "n") {
         weatherAppWrapper.setAttribute("class", "weather-app-wrapper-night")
+        weatherApp.setAttribute("class", "weather-app-night")
     } else if (dayOrNight === "d") { 
         weatherAppWrapper.setAttribute("class", "weather-app-wrapper-day")
+        weatherApp.setAttribute("class", "weather-app-day")
     }
     getForecast(response.data.coord);
 }
