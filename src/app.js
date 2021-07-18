@@ -47,7 +47,7 @@ function displayForecast(response){
 }
 
 function getForecast(coordinates){
-    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let apiKey = "8241f45cf931c43fccdbeeaa5f496f97";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`
     axios.get(apiUrl).then(displayForecast);
 }
@@ -82,7 +82,7 @@ function displayTemperature(response){
 
 //function exists to call default city search, basically
 function search(city){
-    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let apiKey = "8241f45cf931c43fccdbeeaa5f496f97";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayTemperature); 
 }
@@ -90,7 +90,7 @@ function search(city){
 //function to create API call when submitted via city search form
 function createApiUrlFromForm(event){
     event.preventDefault();
-    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let apiKey = "8241f45cf931c43fccdbeeaa5f496f97";
     let units = "imperial";
     let city = document.querySelector("#city-input").value;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -101,7 +101,7 @@ function createApiUrlFromForm(event){
 function createApiUrlFromPosition(position) {
     //clearing out last entered city from search box
     document.querySelector("#city-input").value = "";
-    let apiKey = "0938aaea4eb798390f9b1df3fa43323f";
+    let apiKey = "8241f45cf931c43fccdbeeaa5f496f97";
     let units = "imperial";
     let lon = position.coords.longitude;
     let lat = position.coords.latitude;
